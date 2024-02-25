@@ -114,21 +114,17 @@ app.get('/userdetails',(req,res)=>{
          });
     }
 })
-app.get('/balance',(req,res)=>{
-    if (!req.session.user) {
-        res.redirect('/login');
-    } else {
-        res.render("balance")
-    }
-})
-app.get('/balance/info',async(req,res)=>{
+app.get('/balance',async(req,res)=>{
     if (!req.session.user) {
         res.redirect('/login');
     } else {
         let  data=await userModel.find({name:`${req.session.user.name}`})
-        res.status(200).json({datas:data[0].balance})
+        res.render("balance",{
+            balance:data[0].balance
+        })
     }
 })
+
 app.get('/transfer',(req,res)=>{
     if (!req.session.user) {
         res.redirect('/login');
