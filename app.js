@@ -53,9 +53,10 @@ app.post('/postsignin', async (req, res) => {
             return res.render("helper",{error:"User already exists"});
         }
         // Create new user
-        await userModel.create({
+        req.session.user=await userModel.create({
             name, password, email, accno, accpin, balance: 5000, nooftrans: 0
         });
+
         console.log("User created successfully");
         res.render("home", { name });
     } catch (error) {
@@ -118,7 +119,7 @@ app.get('/balance',async(req,res)=>{
     if (!req.session.user) {
         res.redirect('/login');
     } else {
-        let  data=await userModel.find({name:`${req.session.user.name}`})
+        let  data=await userModel.find({name:req.session.user.name})
         res.render("balance",{
             balance:data[0].balance
         })
