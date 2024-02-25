@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <style>
+body
+{
+    background-color: #85FFBD;
+}
+#container
+{
+    border:1px solid black;
+    border-radius:15px;
+    margin-top:20%;
+    height:fit-content;
+    display:flex;
+    background-color: #12192C;
+    flex-flow:column wrap;
+}
+
+.inputcss
+{
+    background-color: #12192C;
+    color:#fff;
+    margin: 20px;
+    border:none;
+    border-bottom:1px solid #fff;
+    height:30px;
+    font-size:15px;
+    outline:none;
+    width:80%;
+}
+.signupbt
+{
+    color:green;
+    font-size:20px;
+    border:1px solid #85FFBD;
+    background-color: #85FFBD;
+    color:black;
+    height:45px;
+    width:150px;
+    border-radius:13px;
+    margin:5%;
+    margin-left:40%;
+}
+.anchor
+{
+    color:#fff;
+    margin-left:20%;
+}
+.loginbt:hover{
+    
+    background-color: #12192C;
+    color:#85FFBD;
+}
+</style>
+</head>
+<body>
+    <div id="container">
+        <form action="/postsignin" method="POST" >
+            <input name="name" value="as" id="name"class="inputcss"placeholder="Name:"type="text">
+            <input name="password"value="qa"id="password"class="inputcss" placeholder="Password:"type="Password">
+            <input name="email"value="asas@dsds.com" id="email"class="inputcss"placeholder="Email" type="email">
+            <input name="accno"value="221"id="accno"class="inputcss"placeholder="AccountNumber:"type="number">
+            <input name="accpin"value="2"id="accpin"class="inputcss"placeholder="Pin:"type="number"><br>
+            <a class="anchor" href="/login">Alredy have an account</a>
+            <input type="submit">
+            </form>
+    </div>
+</body>
+</html>
