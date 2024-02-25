@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amount Transfer</title>
+    <style>
+        body{
+    background-color:#85FFBD ;
+}
+.button-82-pushable
+{
+    font-size:20px;
+    border:1px solid #85FFBD;
+    background-color: #85FFBD;
+    color:black;
+    height:45px;
+    width:150px;
+    border-radius:13px;
+    margin:5%;
+}
+.button-82-pushable:hover{
+    
+    background-color: #12192C;
+    color:#85FFBD;
+}
+
+#container
+{
+    border:1px solid black;
+    border-radius:15px;
+    margin-top:20%;
+    height:fit-content;
+    display:flex;
+    background-color: #12192C;
+    flex-flow:column wrap;
+}
+.inputcss
+{
+    background-color: #12192C;
+    color:#fff;
+    margin: 20px;
+    border:none;
+    border-bottom:1px solid #fff;
+    height:30px;
+    font-size:15px;
+    outline:none;
+}
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <form method="POST"action="/posttransfer">
+        <input id="Accountno"class="inputcss"placeholder="Amount"type="number"name="amt">
+        <input id="recaccno"class="inputcss" placeholder="Receiver Accountno:"type="number"name="reaccno">
+        <input id="pin"class="inputcss"placeholder="Account pin:"type="number"name="pin">
+            <input type="submit" class="button-82-pushable" role="button">
+                <span class="button-82-shadow"></span>
+                <span class="button-82-edge"></span>
+                <span class="button-82-front text">
+                </span>
+              </input>
+        </form>
+    
+    </div>
+</body>
+</html>
