@@ -162,23 +162,16 @@
           </button>
     </div>
     <div class="balancect">
-        <h2>Balance:  <span  class="balance"></span></h2>
+        <h2>Balance:  <span  class="balance" style="display:none;">{{balance}}</span></h2>
             <a href="/home"style="color:white;">Back</a>
     </div>
 
     <script >
       const checkBt=document.querySelector(".button-82-pushable")
       const balance=document.querySelector(".balance")
-async function getdata(e){
-  e.preventDefault();
-  let url='http://localhost:8000/balance/info'
-  const res=await fetch(url,{
-    method:'GET'
-  })
-  let data=await res.json()
-  balance.textContent=data.datas;
-}
-checkBt.addEventListener('click',getdata)
+checkBt.addEventListener('click',(e)=>{
+    balance.style.csstype.display="flex"
+})
  
     </script>
 </body>
