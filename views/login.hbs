@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body{
+    background-color:#85FFBD ;
+}
+#container
+{
+    border:1px solid black;
+    border-radius:15px;
+    margin-top:40%;
+    height: 300px;
+    display:flex;
+    background-color: #12192C;
+    flex-flow:column wrap;
+}
+.inputcss
+{
+    background-color: #12192C;
+    color:#fff;
+    margin: 20px;
+    border:none;
+    border-bottom:1px solid #fff;
+    height:30px;
+    font-size:15px;
+    outline:none;
+}
+.loginbt
+{
+    font-size:20px;
+    border:1px solid #85FFBD;
+    background-color: #85FFBD;
+    color:black;
+    height:45px;
+    width:150px;
+    border-radius:13px;
+    margin:5%;
+}
+.loginbt:hover{
+    
+    background-color: #12192C;
+    color:#85FFBD;
+}
+
+    </style>
+
+</head>
+<body>
+    <div id="container">
+        <form method="POST" action="/postlogin">
+            <input name="email"id="email"class="emailin inputcss" type="email" placeholder="Email">
+            <input name="password"id="password"class="passwordin inputcss"type="password" placeholder="Password"> 
+            <input type="submit"class="loginbt"id="loginbt"></input>
+        </form>
+    </div>
+</body>
+</html>
