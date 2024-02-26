@@ -44,7 +44,7 @@ app.get('/signin', (req, res) => {
 
 // Handle signin POST request
 app.post('/postsignin', async (req, res) => {
-    if(req.body.length==5)console.log(req.body.length)
+    if(req.body.length==5){
     const { name, password, email, accno, accpin } = req.body;
     try {
         // Check if user already exists
@@ -65,6 +65,12 @@ app.post('/postsignin', async (req, res) => {
         res.status(500).render("helper",{
             error:"Enter valid Values Because Given values already available"
         });
+    }
+    }
+    else{
+        res.render("helper",{
+            error:"Fill all box"
+        })
     }
 });
 
