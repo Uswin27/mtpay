@@ -69,7 +69,7 @@ app.post('/postsignin', async (req, res) => {
 
 // Render login page
 app.get('/', (req, res) => {
-    res.render('login');
+    res.render('signin');
 });
 app.get('/login', (req, res) => {
     res.render('login');
