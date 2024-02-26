@@ -44,7 +44,7 @@ app.get('/signin', (req, res) => {
 
 // Handle signin POST request
 app.post('/postsignin', async (req, res) => {
-    if(req.body.length==5){
+    if(req.body.name!=""&&req.body.password!=""&&req.body.email!=""&&req.body.accno!=""&&req.body.accpin!=""){
     const { name, password, email, accno, accpin } = req.body;
     try {
         // Check if user already exists
