@@ -14,11 +14,9 @@
     border-radius: 5px;
     padding:5%;
 }
-
 .title
 {
      flex-grow: 8; 
-    color:#12192c;
 }
 .icons
 {
@@ -28,7 +26,6 @@
 {
     text-align: end;
 }
-
 #main
 {
     margin-top:40%;
@@ -45,9 +42,7 @@
 {
     border-radius: 30px;
     font-size:35px;
-
 }
-
 /* CSS */
 .button-82-pushable {
   position: relative;
@@ -61,7 +56,6 @@
   -webkit-user-select: none;
   touch-action: manipulation;
 }
-
 .button-82-shadow {
   position: absolute;
   top: 0;
@@ -77,7 +71,6 @@
     600ms
     cubic-bezier(.3, .7, .4, 1);
 }
-
 .button-82-edge {
   position: absolute;
   top: 0;
@@ -93,7 +86,6 @@
     #85FFBD
   );
 }
-
 .button-82-front {
   display: block;
   position: relative;
@@ -109,18 +101,15 @@
     600ms
     cubic-bezier(.3, .7, .4, 1);
 }
-
 @media (min-width: 768px) {
   .button-82-front {
     font-size: 1.25rem;
   }
 }
-
 .button-82-pushable:hover {
   filter: brightness(110%);
   -webkit-filter: brightness(110%);
 }
-
 .button-82-pushable:hover .button-82-front {
   transform: translateY(-6px);
   transition:
@@ -128,12 +117,10 @@
     250ms
     cubic-bezier(.3, .7, .4, 1.5);
 }
-
 .button-82-pushable:active .button-82-front {
   transform: translateY(-2px);
   transition: transform 34ms;
 }
-
 .button-82-pushable:hover .button-82-shadow {
   transform: translateY(4px);
   transition:
@@ -141,12 +128,10 @@
     250ms
     cubic-bezier(.3, .7, .4, 1.5);
 }
-
 .button-82-pushable:active .button-82-shadow {
   transform: translateY(1px);
   transition: transform 34ms;
 }
-
 .button-82-pushable:focus:not(:focus-visible) {
   outline: none;
 }
@@ -154,9 +139,7 @@
 {
     color:black;
     text-decoration: none;
-    margin-left:10%;
 }
-
     </style>
 </head>
 <body>
@@ -169,16 +152,16 @@
                 <span class="usericon icons">
                     <a href="/transaction" class="anchorcss">
                     <i class="fa-solid fa-bell"></i></a>
-                </span><span class="usericon icons">
+                </span>
+                <span class="usericon icons">
                     <a href="/logout" class="anchorcss">
                     <i class="fa-solid fa-right-from-bracket"></i>
+                    </a>
                 </span>
     </header>
-
     <main id="main">
         <h2>Welcome {{name}}</h2>
     </main>
-
     <footer id="bottom"class="headandbottom">
        
             <!-- <button class="balancebt">Balance Enquiry</button> -->
@@ -195,7 +178,6 @@
                 <span class="transfericon"><i class="fa-solid fa-plus"></i></span>
             </a>
     </footer>
-
     <script src="https://kit.fontawesome.com/639758365f.js" crossorigin="anonymous"></script>
 </body>
 </html>
