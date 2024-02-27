@@ -44,8 +44,9 @@ app.get('/signin', (req, res) => {
 
 // Handle signin POST request
 app.post('/postsignin', async (req, res) => {
+    
     if(req.body.name!=""&&req.body.password!=""&&req.body.email!=""&&req.body.accno!=""&&req.body.accpin!=""){
-    const { name, password, email, accno, accpin } = req.body;
+    let { name, password, email, accno, accpin } = req.body;
     try {
         // Check if user already exists
         const existingUser = await userModel.findOne({ email });
@@ -54,6 +55,7 @@ app.post('/postsignin', async (req, res) => {
             return res.render("helper",{error:"User already exists"});
         }
         // Create new user
+        name=name.toUpperCase();
         req.session.user=await userModel.create({
             name, password, email, accno, accpin, balance: 5000, nooftrans: 0
         });
@@ -245,7 +247,7 @@ app.post('/submit',async(req,res)=>{
 })
 
 // Set up server
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 9000;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
