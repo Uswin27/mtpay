@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {{!-- <link href="css/home.css" rel="stylesheet" type="type/css"> --}}
     <title>Welcome User</title>
     <style>
         
@@ -26,10 +25,25 @@
 {
     text-align: end;
 }
-#main
+@media screen and (max-device-width: 480px) 
+    and (orientation: portrait) {
+    .gfg-div {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        color: #fff;
+    }
+    #main
 {
     margin-top:40%;
     margin-left:10%;
+}
+}
+
+#main
+{   
+     margin-top: 20%;
+    margin-left: 10%;
 }
 #bottom
 {
@@ -164,7 +178,6 @@
     </main>
     <footer id="bottom"class="headandbottom">
        
-            <!-- <button class="balancebt">Balance Enquiry</button> -->
             <a href="/balance">
                 <button class="button-82-pushable" role="button">
                     <span class="button-82-shadow"></span>
